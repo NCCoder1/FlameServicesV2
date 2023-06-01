@@ -12,11 +12,11 @@
   background-color: #000;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* Align navbar to the right */
   position: fixed;
   top: 0;
-  right:-85%;
-  width: 100%;
+  right: 0; /* Position navbar on the right side */
+  width: fit-content;
 }
 
 .navbar-brand {
