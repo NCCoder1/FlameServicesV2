@@ -178,6 +178,38 @@
   text-align: center;
 }
 
-#input {
-  display: none;
+#time {
+  font-size: 16px;
+  margin-top: 200px;
+
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ff3d3d;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  justify-content: center;
+  opacity: 0.4;
+  margin-right: 100px;
 }
+
+#Update-Log {
+  margin-top: 200px;
+  font-size: 10px;
+  border-width: 10px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ff3d3d;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  opacity: 0.4;
+}
+
+
+
+
