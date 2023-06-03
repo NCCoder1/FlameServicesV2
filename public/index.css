@@ -242,3 +242,18 @@
   border-color: rgb(80, 10, 10);
   border-width: 5px;
 }
+
+.iframe-warning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 2px solid #ff6b6b;
+  border-radius: 10px;
+  background-color: rgba(255, 107, 107, 0.2);
+  text-align: center;
+  font-size: 24px;
+  color: #ff6b6b;
+}
+
