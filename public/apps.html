@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flame Network - Apps</title>
+  <link rel="stylesheet" href="apps.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '1083912608035373057', // FlameWorks
+        channel: '1114360414776610956' // #💬-widget-general
+    })
+</script>
+</head>
+<body>
+    <header class="header">
+        <h1>Apps Flame Network V2</h1>
+        <nav class="navbar">
+          <ul class="navbar-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="/inprogress.html">Games</a></li>
+            <li><a href="/setting">Settings</a></li>
+            <li><a href="/inprogress.html">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+
+  <section class="apps-section">
+    <div class="apps-container">
+      <div class="app" onclick="openURL('discord.com/app')">
+        <img src="icons/discord.png" alt="Discord">
+        <h3>Discord</h3>
+      </div>
+      <div class="app" onclick="openURL('netflix.com')">
+        <img src="icons/netflix.png" alt="Netflix">
+        <h3>Netflix</h3>
+      </div>
+      <div class="app" onclick="openURL('youtube.com')">
+        <img src="icons/youtube.jpg" alt="YouTube">
+        <h3>YouTube</h3>
+      </div>
+      <div class="app" onclick="openURL('www.amazon.com/')">
+        <img src="icons/amazon.png" alt="Amazon">
+        <h3>Amazon</h3>
+      </div>
+      <div class="app" onclick="openURL('www.amazon.com/')">
+        <img src="icons/hbo.webp" alt="HBO MAX">
+        <h3>HBO MAX</h3>
+      </div>
+    </div></section>
+      <!-- Next 4 Apps -->
+      <section class="apps-section">
+        <div class="apps-container">
+      <div class="app" onclick="openURL('www.twitch.tv/')">
+        <img src="icons/twitch-tv.png" alt="Twitch">
+        <h3>Twitch</h3>
+      </div>
+      <div class="app" onclick="openURL('www.coolmathgames.com')">
+        <img src="icons/coolmath.png" alt="Cool Math Games">
+        <h3>Cool Math Games</h3>
+      </div>    
+      <div class="app" onclick="openURL('poki.com')">
+        <img src="icons/poki.png" alt=Poki">
+        <h3>Poki</h3>
+      </div>
+      <div class="app" onclick="openURL('poki.com')">
+        <img src="icons/y8.png" alt="Y8 Games">
+        <h3>Y8 Games</h3>
+      </div>
+      <div class="app" onclick="openURL('now.gg')">
+        <img src="icons/nowgg.jpeg" alt="Now.GG">
+        <h3>Now.GG</h3>
+      </div></div></section>
+      <!-- Next 4 Apps -->
+      <section class="apps-section">
+        <div class="apps-container">
+      <div class="app" onclick="openURL('chatgpt-app.techwithanirudh.repl.co/login')">
+        <img src="icons/chatgpt.png" alt="ChatGPT">
+        <h3>Chat GPT</h3>
+      </div>
+      <div class="app" onclick="openURL('vscode.dev')">
+        <img src="icons/vscode.png" alt="VS Code">
+        <h3>VS Code</h3>
+      </div>
+      <div class="app" onclick="openURL('github.com')">
+        <img src="icons/github.png" alt="Github">
+        <h3>Github</h3>
+      </div>
+      <div class="app" onclick="openURL('spotify.com')">
+        <img src="icons/spotify.png" alt="Spotify">
+        <h3>Spotify</h3>
+      </div>
+      <div class="app" onclick="openURL('www.reddit.com/')">
+        <img src="icons/reddit.png" alt="Reddit">
+        <h3>Reddit</h3>
+      </div>
+      <!-- Add more app entries here -->
+    </div>
+  </section>
+  <script src="uv/uv.bundle.js" defer></script>
+  <script src="uv/uv.config.js" defer></script>
+  <script src="uv/uv.handler.js" defer></script>
+  <script src="uv/uv.sw.js" defer></script>
+  <script src="index.js" defer></script>  
+</body>
+</html>
+
+<script src="setting/js/index.js"></script>
+<script src="setting/js/settings.js"></script>
+<script src="setting/js/panic.js"></script>
+
+<script>
+  // Function to handle keydown event and trigger redirection
+document.addEventListener("keydown", function(event) {
+  var panicKey = localStorage.getItem("panicKey");
+  var panicWebsite = localStorage.getItem("panicWebsite");
+
+  if (event.key === (panicKey || "]")) {
+    var website = (panicWebsite || "https://classroom.google.com").toLowerCase();
+
+    // Check if "http://" or "https://" is missing and add it
+    if (!website.startsWith("http://") && !website.startsWith("https://")) {
+      website = "http://" + website;
+    }
+
+    window.location.href = website;
+  }
+});
+</script>
