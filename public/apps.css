@@ -122,3 +122,55 @@ body {
 .navbar-links li a:hover {
   color: #ff6b6b;
 }
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #ff6b6b;
+}
+
+.modal-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.modal-content .redirect-button {
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.modal-content .redirect-button:hover {
+  background-color: #ff3d3d;
+}
+
+.modal-content .redirect-button:focus {
+  outline: none;
+}
