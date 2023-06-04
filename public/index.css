@@ -211,9 +211,9 @@
   margin-top: 150px;
   font-size: 10px;
   border-width: 10px;
-  cursor:default;
+  cursor: default;
   text-align: center;
-  background-color:rgb(80, 10, 10);
+  background-color: rgb(80, 10, 10);
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -222,31 +222,33 @@
   opacity: 0.85;
 }
 
-#Update-Log h2{
+#Update-Log h2 {
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
-  color:white;
+  color: white;
   text-align: center;
   margin-top: -12.2%;
 }
 
-.updatenav{
+.updatenav {
   font-size: 12px;
   font-family: 'Merriweather', serif;
   margin-top: -10%;
   text-align: center;
 }
 
-#timetxt{
-  margin-top:12px;
+#timetxt {
+  margin-top: -4px;
 }
 
-#time:hover, #Update-Log:hover{
+#time:hover,
+#Update-Log:hover {
   background-color: #ff3d3d;
   border-style: solid;
   border-color: rgb(80, 10, 10);
-  border-width: 5px;
+  border-width: 2px;
 }
+
 
 .modal-overlay {
   position: fixed;

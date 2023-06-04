@@ -1,9 +1,9 @@
 /* about.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
 body {
+  font-family: Arial, sans-serif;
   background-color: #000;
   margin: 0;
-  font-family: Arial, sans-serif;
   color: #fff;
 }
 
@@ -77,6 +77,7 @@ body {
   display: flex;
   justify-content: flex-end; /* Align navbar to the right */
   position: fixed;
+  font-family: 'Poppins', sans-serif;
   top: 0;
   right: 0; /* Position navbar on the right side */
   width: fit-content;
