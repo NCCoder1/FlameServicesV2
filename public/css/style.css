@@ -1,5 +1,5 @@
+/* about.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
-
 body {
   background-color: #000;
   margin: 0;
@@ -12,8 +12,8 @@ body {
   padding: 20px;
   margin-top: 0.6%;
   text-align: center;
-  width: 30%;
-  margin-right: 35%;
+  width:30%;
+  margin-right:35%;
   margin-left: 33.5%;
 }
 
@@ -24,68 +24,52 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.apps-section {
-  text-align: center;
-  margin-top: 50px;
-}
 
-.apps-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.app {
-  width: calc(25% - 15%); /* Adjust the width as needed */
+.content {
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
-  height:75%;;
   border: 2px solid #ff6b6b;
   border-radius: 10px;
   background-color: rgba(255, 107, 107, 0.2);
-  margin-bottom: 5px;
 }
 
-.app img {
-  width: 70%;
-  max-height: 70%; /* Adjust the height as needed */
-  object-fit: cover;
-  border-radius: 15%;
-}
-
-
-.app h3 {
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 5px;
+.content h2 {
+  font-size: 24px;
+  margin-top: 0;
   color: #ff6b6b;
 }
 
-.app .launch-button {
-  background-color: #ff6b6b;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content p:first-child {
+  margin-top: 0;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.quote {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.quote a {
+  font-style: italic;
+  font-size: 20px;
+  color: #ff4545;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.app .launch-button:hover {
-  background-color: #ff3d3d;
+.quote a:hover {
+  color: #ff2828;
 }
 
-.app:hover {
-  background-color: #ff3d3d;
-  cursor: pointer;
-}
-
-.app:hover h3,
-.app:hover .launch-button {
-  color: #fff;
-}
 
 .navbar {
   background-color: #000;
@@ -97,6 +81,8 @@ body {
   right: 0; /* Position navbar on the right side */
   width: fit-content;
 }
+
+
 
 .navbar-links {
   list-style-type: none;
@@ -124,7 +110,6 @@ body {
 .navbar-links li a:hover {
   color: #ff6b6b;
 }
-
 
 .modal-overlay {
   position: fixed;
