@@ -6,7 +6,7 @@
   color: #fff;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   
 }
 
@@ -299,4 +299,24 @@
 
 .modal-content .redirect-button:focus {
   outline: none;
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ff6b6b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff3838;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1a1a;
 }
