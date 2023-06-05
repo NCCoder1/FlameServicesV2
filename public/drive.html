@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="index.css" />
     <title>Flame Network Drive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/solid.min.js" integrity="sha512-Qc+cBMt/4/KXJ1F6nNQahXIsgPygHM4S2XWChoumV8qkpZ9oO+gBDBEpOxgbkQQ/6DlHx6cUxa5nBhEbuiR8xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -23,6 +26,7 @@
     <div class="navbar-brand" style="margin-top:0.25%">Flame Network
         <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i>‎  Back</a> 
         <a class="fullscreen-button" onclick="toggleFullscreen()"><i class="fas fa-expand-arrows-alt"></i>‎  Fullscreen</a>
+        <a class="nowggbtn" onclick="adjustVideoElementPosition()"><i class="fa-solid fa-hammer"></i> ‎Fix Now.GG Screen</a> 
     </div>
     <nav class="navbar">
       <ul class="navbar-links">
@@ -51,7 +55,7 @@
 <style>
 
 
-.fullscreen-button, .back {
+.fullscreen-button, .back, .nowggbtn {
   background-color: #ff6b6b;
   color: #fff;
   font-size: 16px;
@@ -69,7 +73,7 @@
   display: inline-block;
 }
 
-.fullscreen-button:hover, .back:hover {
+.fullscreen-button:hover, .back:hover, .nowggbtn:hover {
   background-color: #ff3d3d;
 }
 
@@ -118,3 +122,11 @@ document.addEventListener("keydown", function(event) {
   </div>
 </div>
 <script src="iframe.js"></script>
+
+<script>
+  function adjustVideoElementPosition() {
+  var element = document.getElementById("js-game-video");
+  element.style.top = (element.offsetTop + 370) + "px";
+}
+
+</script>
