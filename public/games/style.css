@@ -128,3 +128,20 @@ body {
   .navbar-links li a:hover {
     color: #ff6b6b;
   }
+
+  .credit-line {
+  position: fixed;
+  cursor:default;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.credit-text {
+  color: #fff;
+  font-size: 14px;
+}
+
+  
