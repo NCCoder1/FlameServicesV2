@@ -313,10 +313,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ff3838;
+  background: linear-gradient(#ff3838, #ff1a1a);
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff1a1a;
+  background: linear-gradient(to bottom, #ff1a1a, #ff0000);
 }
