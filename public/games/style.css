@@ -33,6 +33,7 @@ body {
     width: 70%;
     margin-top: 20px;
     padding: 10px;
+    cursor:pointer;
     color:white;
     font-size: 16px;
     border-radius: 5px;
@@ -43,6 +44,11 @@ body {
   .search-input::placeholder{
     color:white;
     text-transform: capitalize;
+  }
+
+  .search-input:focus{
+    border: 2px solid #ff695b;
+    border-color: #ff695b;
   }
   
   
@@ -85,6 +91,7 @@ body {
     margin-top: 10px;
     text-align: center;
     height:20px;
+    padding-bottom: 7.5px;
     font-size: 18px;
     color:black;
   }
