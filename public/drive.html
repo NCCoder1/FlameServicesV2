@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://arc.io/widget.min.js#7XhXtAPs"></script>
     <link rel="stylesheet" href="index.css" />
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.handler.js" defer></script>
+    <script src="uv/uv.sw.js" defer></script>
+    <script src="sw.js" defer></script>
+    <script src="arc-sw.js" defer></script>
+    <script src="index.js" defer></script>
+    <meta charset="UTF-8">
+    <script src="uv/uv.config.js" defer></script>
     <title>Flame Network Drive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" 
@@ -26,9 +34,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     <div class="navbar-brand" style="margin-top:0.25%">Flame Network
         <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i>‎  Back</a> 
         <a class="fullscreen-button" onclick="toggleFullscreen()"><i class="fas fa-expand-arrows-alt"></i>‎  Fullscreen</a>
+        <form id="form" action="/service" class="flex-center" style="padding:0;">
+          <div class="group">
+            <input id="input" name="search" type="text" style="display:inline;" placeholder="Search The Web or Enter A URL" class="webinput2" />
+          </div>
+        </form>
     </div>
     <nav class="navbar">
-      <ul class="navbar-links">
+      <ul class="navbar-links" style="margin-top:-5px">
         <li><a href="#home">Home</a></li>
         <li><a href="about">About</a></li>
         <li><a href="apps.html">Apps</a></li>
@@ -76,6 +89,35 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   background-color: #ff3d3d;
 }
 
+#input {
+  display: inline;
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  height:1.25%;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff6b6b;
+  color: black;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+#input::placeholder {
+  color: black;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+#input:focus {
+  outline: none;
+  background-color: #ff3d3d;
+}
+
+
 </style>
 
 
@@ -122,3 +164,13 @@ document.addEventListener("keydown", function(event) {
 </div>
 <script src="iframe.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+     var selectedSearchEngine = localStorage.getItem("selectedSearchEngine");
+     if (selectedSearchEngine === null) {
+       selectedSearchEngine = "https://www.google.com/search?q="; // Set default value
+       localStorage.setItem("selectedSearchEngine", selectedSearchEngine);
+     }
+     
+   });
+ </script>

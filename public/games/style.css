@@ -48,6 +48,7 @@ body {
 
   .search-input:focus{
     border: 2px solid #ff695b;
+    outline: none;
     border-color: #ff695b;
   }
   
