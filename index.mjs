@@ -11,9 +11,6 @@ const server = http.createServer();
 
 server.on('request', (request, response) => {
     if (bare.route_request(request, response)) return true;
-	if (request.url.endsWith('.html')) {
-    request.url = request.url.slice(0, -5);
-  }
     serve.serve(request, response);
 });
 
