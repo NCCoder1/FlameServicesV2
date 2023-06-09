@@ -7,10 +7,10 @@ import nodeStatic from 'node-static';
 
 const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('public/');
-
+const certDir = path.resolve(__dirname, 'ssl');
 const options = {
-    key: fs.readFileSync('../ssl/key.pem'),
-    cert: fs.readFileSync('../ssl/cert.pem')
+    key: fs.readFileSync(certDir, 'key.pem'),
+    cert: fs.readFileSync(certDir, 'cert.pem')
   }
 
 
