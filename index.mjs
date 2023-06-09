@@ -1,6 +1,7 @@
 import Server from './bare/Server.mjs';
 import { readFileSync } from 'fs';
 import http from 'http';
+import fs from 'fs';
 import nodeStatic from 'node-static';
 
 
