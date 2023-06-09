@@ -3,6 +3,7 @@ import { readFileSync } from 'fs';
 import http from 'http';
 import fs from 'fs';
 import nodeStatic from 'node-static';
+import path from 'path';
 
 
 const bare =  new Server('/bare/', '');
