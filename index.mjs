@@ -7,7 +7,16 @@ import nodeStatic from 'node-static';
 const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('public/');
 
-const server = http.createServer();
+const options = {
+    key: fs.readFileSync('../ssl/key.pem'),
+    cert: fs.readFileSync('../ssl/cert.pem')
+  }
+
+
+const server = https.createServer(options);
+
+
+
 
 server.on('request', (request, response) => {
     if (bare.route_request(request, response)) return true;
@@ -19,4 +28,4 @@ server.on('upgrade', (req, socket, head) => {
 	socket.end();
 });
 
-server.listen(process.env.PORT || 80);
+server.listen(process.env.PORT || 443);
