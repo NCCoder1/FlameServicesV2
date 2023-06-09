@@ -11,6 +11,7 @@ const serve = new nodeStatic.Server('public/');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const certDir = join(__dirname, 'ssl');
 const options = {
     key: fs.readFileSync(certDir, 'key.pem'),
     cert: fs.readFileSync(certDir, 'cert.pem')
