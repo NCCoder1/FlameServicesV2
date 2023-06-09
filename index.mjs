@@ -3,12 +3,14 @@ import { readFileSync } from 'fs';
 import http from 'http';
 import fs from 'fs';
 import nodeStatic from 'node-static';
-import path from 'path';
-
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
 const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('public/');
-const certDir = path.resolve(__dirname, 'ssl');
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const options = {
     key: fs.readFileSync(certDir, 'key.pem'),
     cert: fs.readFileSync(certDir, 'cert.pem')
