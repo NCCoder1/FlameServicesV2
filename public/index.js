@@ -45,3 +45,8 @@ function openURL(url) {
 
   });
 };
+
+
+function openGame(url) {
+      window.location.href = url;
+};
